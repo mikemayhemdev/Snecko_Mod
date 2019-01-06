@@ -1,0 +1,11 @@
+{
+	"Snecko:MasterEyePower": {
+		"NAME": "Master Eye",
+		"DESCRIPTIONS": [
+			"At the start of each turn, reduce the cost of the highest-cost card in your hand by 1.",
+			"At the start of each turn, reduce the cost of the ",
+			" highest-cost cards in your hand by 1."
+
+		]
+	}
+}
