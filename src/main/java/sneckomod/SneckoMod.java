@@ -13,14 +13,7 @@
  import com.megacrit.cardcrawl.rooms.AbstractRoom;
  import java.nio.charset.StandardCharsets;
  import org.apache.logging.log4j.Logger;
- import sneckomod.cards.AbstractSneckoCard;
- import sneckomod.cards.UnknownCommonAttack;
- import sneckomod.cards.UnknownCommonSkill;
- import sneckomod.cards.UnknownRareAttack;
- import sneckomod.cards.UnknownRarePower;
- import sneckomod.cards.UnknownRareSkill;
- import sneckomod.cards.UnknownUncommonAttack;
- import sneckomod.cards.UnknownUncommonPower;
+ import sneckomod.cards.*;
  import sneckomod.patches.AbstractCardEnum;
  import sneckomod.patches.SneckoEnum;
 
@@ -137,7 +130,7 @@
 
    public void receiveEditKeywords()
    {
-     BaseMod.addKeyword(new String[] { "unknown" }, "Unplayable, Soulbound.  At the start of combat, transforms into a random card from any class, with a randomized cost.");
+     BaseMod.addKeyword(new String[] { "unknown" }, "Soulbound.  At the start of combat, transforms into a random card from any class, with a randomized cost.");
 
      BaseMod.addKeyword(new String[] { "snekproof" }, "Cost cannot be randomized.");
    }
@@ -148,7 +141,7 @@
      AbstractSneckoCard chosenCard;
 
      if (!raresOnly) {
-       int newStr = AbstractDungeon.cardRandomRng.random(8);
+       int newStr = AbstractDungeon.cardRandomRng.random(7);
 
      switch (newStr) {
        case 0:
@@ -158,24 +151,21 @@
          chosenCard = new UnknownCommonSkill();
          break;
        case 2:
-         chosenCard = new sneckomod.cards.UnknownCommonPower();
-         break;
-       case 3:
          chosenCard = new UnknownUncommonAttack();
          break;
-       case 4:
-         chosenCard = new sneckomod.cards.UnknownUncommonSkill();
+       case 3:
+         chosenCard = new UnknownUncommonSkill();
          break;
-       case 5:
+       case 4:
          chosenCard = new UnknownUncommonPower();
          break;
-       case 6:
+       case 5:
          chosenCard = new UnknownRareAttack();
          break;
-       case 7:
+       case 6:
          chosenCard = new UnknownRareSkill();
          break;
-       case 8:
+       case 7:
          chosenCard = new UnknownRarePower();
          break;
        default:
