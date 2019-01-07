@@ -1,6 +1,7 @@
  package sneckomod.cards;
 
  import basemod.abstracts.CustomCard;
+ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
  import com.megacrit.cardcrawl.cards.AbstractCard;
  import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
  import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
@@ -22,9 +23,13 @@
 
  public abstract class AbstractSneckoCard extends CustomCard
  {
+
+
    public AbstractSneckoCard(String id, String name, String img, int cost, String rawDescription, AbstractCard.CardType type, AbstractCard.CardColor color, AbstractCard.CardRarity rarity, AbstractCard.CardTarget target)
    {
      super(id, name, img, cost, rawDescription, type, color, rarity, target);
+
+
    }
 
 
@@ -32,14 +37,6 @@
    public void triggerWhenDrawn()
    {
      super.triggerWhenDrawn();
-     if (hasTag(SneckoMod.UNKNOWN)) {
-       replaceUnknown(true);
-     }
-   }
-
-   public void triggerOnOtherCardPlayed(AbstractCard c)
-   {
-     super.triggerOnOtherCardPlayed(c);
      if (hasTag(SneckoMod.UNKNOWN)) {
        replaceUnknown(true);
      }
@@ -94,7 +91,7 @@
          AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
        } else {
          AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction(this, p.hand));
-         AbstractDungeon.player.hand.addToHand(cUnknown);
+           AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cUnknown));
        }
      }
    }

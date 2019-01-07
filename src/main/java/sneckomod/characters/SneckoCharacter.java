@@ -133,7 +133,7 @@
 
    public CharSelectInfo getLoadout()
    {
-     return new CharSelectInfo(NAME, DESCRIPTION, 60, 60, 1, 99, 5, this,
+     return new CharSelectInfo(NAME, DESCRIPTION, 50, 50, 1, 99, 5, this,
 
        getStartingRelics(), getStartingDeck(), false);
    }

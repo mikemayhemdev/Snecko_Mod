@@ -12,6 +12,11 @@
     "DESCRIPTION": "Snekproof. NL At the start of each turn, reduce the cost of highest-cost card in your hand by 1.",
     "UPGRADE_DESCRIPTION": "Innate, Snekproof. NL At the start of each turn, reduce the cost of the highest-cost card in your hand by 1."
   },
+  "Snecko:SingleExchange": {
+    "NAME": "Nope",
+    "DESCRIPTION": "Snekproof. NL Exhaust a card in your hand. Replace it with a random card of the same type, with a randomized cost.",
+    "UPGRADE_DESCRIPTION": "Snekproof. NL Draw a card. NL Exhaust a card in your hand. Replace it with a random card of the same type, with a randomized cost."
+  },
   "Snecko:PerplexingGlare": {
     "NAME": "Perplexing Glare",
     "DESCRIPTION": "Snekproof. NL Each enemy gains between -3 and !M! Strength."

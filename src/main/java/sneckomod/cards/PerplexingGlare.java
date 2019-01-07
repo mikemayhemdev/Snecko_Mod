@@ -61,6 +61,13 @@
          if ((!monster.isDead) && (!monster.isDying))
          {
            int newStr = AbstractDungeon.cardRandomRng.random(-3, this.magicNumber);
+           if (newStr == 0){
+               if (AbstractDungeon.cardRandomRng.randomBoolean()){
+                   newStr++;
+               } else {
+                   newStr--;
+               }
+           }
 
            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new StrengthPower(monster, newStr), newStr, true, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.NONE));
          }

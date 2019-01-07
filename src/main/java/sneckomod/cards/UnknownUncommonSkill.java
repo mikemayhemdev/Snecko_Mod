@@ -32,14 +32,10 @@
 
      SoulboundField.soulbound.set(this, Boolean.valueOf(true));
      this.tags.add(SneckoMod.UNKNOWN);
+       this.exhaust = true;
    }
 
 
-
-   public boolean canUse(AbstractPlayer p, AbstractMonster m)
-   {
-     return false;
-   }
 
    public AbstractCard makeCopy() {
      return new UnknownUncommonSkill();
@@ -56,7 +52,14 @@
 
 
 
-
+     public void triggerWhenDrawn()
+     {
+         if (this.cost != 0) {
+             this.cost = 0;
+             this.costForTurn = 0;
+             this.isCostModified = false;
+         }
+     }
 
 
    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Snecko:UnknownUncommonSkill");
@@ -67,7 +70,9 @@
    public static final String IMG_PATH = "cards/unknownUS.png";
    public static final int COST = 0;
 
-   public void use(AbstractPlayer p, AbstractMonster m) {}
+   public void use(AbstractPlayer p, AbstractMonster m) {
+       this.replaceUnknown(true);
+   }
  }
 
 

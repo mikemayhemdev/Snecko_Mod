@@ -119,6 +119,7 @@
      BaseMod.addCard(new sneckomod.cards.SnekBeam());
      BaseMod.addCard(new sneckomod.cards.MasterEye());
      BaseMod.addCard(new sneckomod.cards.PerplexingGlare());
+     BaseMod.addCard(new sneckomod.cards.SingleExchange());
    }
 
 
@@ -130,7 +131,7 @@
 
    public void receiveEditKeywords()
    {
-     BaseMod.addKeyword(new String[] { "unknown" }, "Soulbound.  At the start of combat, transforms into a random card from any class, with a randomized cost.");
+     BaseMod.addKeyword(new String[] { "unknown" }, "Soulbound.  Each combat, transforms into a random card from any class, with a randomized cost.");
 
      BaseMod.addKeyword(new String[] { "snekproof" }, "Cost cannot be randomized.");
    }
