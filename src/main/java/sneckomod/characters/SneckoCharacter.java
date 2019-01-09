@@ -1,8 +1,10 @@
  package sneckomod.characters;
 
+ import basemod.ReflectionHacks;
  import basemod.abstracts.CustomPlayer;
  import com.badlogic.gdx.graphics.Color;
  import com.badlogic.gdx.graphics.g2d.BitmapFont;
+ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  import com.badlogic.gdx.math.MathUtils;
  import com.esotericsoftware.spine.AnimationState;
  import com.esotericsoftware.spine.AnimationState.TrackEntry;
@@ -17,25 +19,38 @@
  import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
  import com.megacrit.cardcrawl.core.CardCrawlGame;
  import com.megacrit.cardcrawl.core.EnergyManager;
+ import com.megacrit.cardcrawl.core.Settings;
  import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
  import com.megacrit.cardcrawl.helpers.FontHelper;
  import com.megacrit.cardcrawl.helpers.Hitbox;
  import com.megacrit.cardcrawl.helpers.ScreenShake;
  import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeDur;
  import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeIntensity;
+ import com.megacrit.cardcrawl.helpers.ShaderHelper;
+ import com.megacrit.cardcrawl.orbs.AbstractOrb;
+ import com.megacrit.cardcrawl.rooms.AbstractRoom;
+ import com.megacrit.cardcrawl.rooms.MonsterRoom;
+ import com.megacrit.cardcrawl.rooms.RestRoom;
  import com.megacrit.cardcrawl.screens.CharSelectInfo;
  import com.megacrit.cardcrawl.unlock.UnlockTracker;
  import com.megacrit.cardcrawl.vfx.combat.IntimidateEffect;
  import java.util.ArrayList;
+ import java.util.Iterator;
+
  import sneckomod.patches.AbstractCardEnum;
  import sneckomod.patches.SneckoEnum;
 
  public class SneckoCharacter extends CustomPlayer
  {
    public static Color cardRenderColor = new Color(0.7F, 0.5F, 0.7F, 1.0F);
+     public float renderscale = 1.2F;
+
+     public void setRenderscale(float renderscale) {
+         this.renderscale = renderscale;
+         reloadAnimation();
 
 
-
+     }
 
 
 
@@ -96,7 +111,7 @@
    }
 
    public void reloadAnimation() {
-     loadAnimation("SneckoImages/char/skeleton.atlas", "SneckoImages/char/skeleton.json", 1.2F);
+     loadAnimation("SneckoImages/char/skeleton.atlas", "SneckoImages/char/skeleton.json", renderscale);
      AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
      e.setTime(e.getEndTime() * MathUtils.random());
      this.stateData.setMix("Hit", "Idle", 0.1F);
@@ -204,9 +219,68 @@
 
 
 
-   private static final com.megacrit.cardcrawl.localization.CharacterStrings charStrings = CardCrawlGame.languagePack.getCharacterString("Snecko");
+
+     @Override
+     public void render(SpriteBatch sb) {
+         if ((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT || AbstractDungeon.getCurrRoom() instanceof MonsterRoom) && !this.isDead) {
+             this.renderHealth(sb);
+             if (!this.orbs.isEmpty()) {
+                 Iterator var2 = this.orbs.iterator();
+
+                 while(var2.hasNext()) {
+                     AbstractOrb o = (AbstractOrb)var2.next();
+                     o.render(sb);
+                 }
+             }
+         }
+
+         if (!(AbstractDungeon.getCurrRoom() instanceof RestRoom)) {
+             if (this.damageFlash) {
+                 ShaderHelper.setShader(sb, ShaderHelper.Shader.WHITE_SILHOUETTE);
+             }
+
+             Boolean renderCorpse = (Boolean)ReflectionHacks.getPrivate(this,AbstractPlayer.class,"renderCorpse");
+
+             if (this.atlas != null && !renderCorpse) {
+                 this.renderPlayerImage(sb);
+             } else {
+                 sb.setColor(Color.WHITE);
+                 sb.draw(this.img, this.drawX - (float)this.img.getWidth() * Settings.scale / 2.0F + this.animX, this.drawY, (float)this.img.getWidth() * Settings.scale, (float)this.img.getHeight() * Settings.scale, 0, 0, this.img.getWidth(), this.img.getHeight(), this.flipHorizontal, this.flipVertical);
+             }
+
+             if (this.damageFlash) {
+                 ShaderHelper.setShader(sb, ShaderHelper.Shader.DEFAULT);
+                 --this.damageFlashFrames;
+                 if (this.damageFlashFrames == 0) {
+                     this.damageFlash = false;
+                 }
+             }
+
+             this.hb.render(sb);
+             this.healthHb.render(sb);
+         } else {
+             sb.setColor(Color.WHITE);
+             this.renderShoulderImg(sb);
+         }
+         if ((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT || AbstractDungeon.getCurrRoom() instanceof MonsterRoom) && !this.isDead) {
+             this.renderHealth(sb);
+             if (!this.orbs.isEmpty()) {
+                 Iterator var2 = this.orbs.iterator();
+
+                 while(var2.hasNext()) {
+                     AbstractOrb o = (AbstractOrb)var2.next();
+                     o.render(sb);
+                 }
+             }
+         }
+
+     }
+
+     private static final com.megacrit.cardcrawl.localization.CharacterStrings charStrings = CardCrawlGame.languagePack.getCharacterString("Snecko");
    public static final String NAME = charStrings.NAMES[0];
    public static final String DESCRIPTION = charStrings.TEXT[0];
+
+
  }
 
 

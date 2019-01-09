@@ -1,0 +1,47 @@
+{
+  "SneckoMod:GrandLightning": {
+    "NAME": "Lightning",
+    "DESCRIPTION": [
+      "#yEvoke: Deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "SneckoMod:GrandFrost": {
+    "NAME": "Frost",
+    "DESCRIPTION": [
+      "#yEvoke: Gain #b",
+      " #yBlock."
+    ]
+  },
+  "SneckoMod:GrandMiasma": {
+    "NAME": "Miasma",
+    "DESCRIPTION": [
+      "#yEvoke: To a random enemy, apply #b",
+      " Weak, #b",
+      " Vulnerable, and remove all Block."
+    ]
+  },
+  "SneckoMod:GrandFocusing": {
+    "NAME": "Focusing",
+    "DESCRIPTION": [
+      "#yEvoke: Gain #b",
+      " Focus."
+    ]
+  },
+  "SneckoMod:GrandDraining": {
+    "NAME": "Draining",
+    "DESCRIPTION": [
+      "#yEvoke: Deal #b",
+      " damage to a random enemy. Heal #b",
+      " HP."
+    ]
+  },
+  "SneckoMod:GrandWarp": {
+    "NAME": "Warp",
+    "DESCRIPTION": [
+      "#yEvoke: Play a random Attack from a random character on a random enemy.",
+      "#yEvoke: Play ",
+      " random Attacks from a random character on a random enemy."
+    ]
+  }
+}

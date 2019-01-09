@@ -1,6 +1,7 @@
  package sneckomod.actions;
 
  import com.badlogic.gdx.graphics.Color;
+ import com.evacipated.cardcrawl.modthespire.Loader;
  import com.megacrit.cardcrawl.actions.AbstractGameAction;
  import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
  import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -14,7 +15,9 @@
  import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
  import com.megacrit.cardcrawl.helpers.CardLibrary;
  import com.megacrit.cardcrawl.localization.UIStrings;
+ import com.megacrit.cardcrawl.unlock.UnlockTracker;
  import sneckomod.SneckoMod;
+ import yohanemod.patches.AbstractCardEnum;
 
  import java.util.ArrayList;
  import java.util.Iterator;
@@ -103,11 +106,17 @@
 
      while (var3.hasNext()) {
        Entry<String, AbstractCard> c = (Entry)var3.next();
-       if (((AbstractCard)c.getValue()).type == c2.type) {
-         tmp.add(c.getKey());
+       if (((AbstractCard)c.getValue()).type == c2.type && c.getValue().rarity != AbstractCard.CardRarity.SPECIAL) {
+         if (Loader.isModLoaded("Yohane")){
+           SneckoMod.logger.info("Nope: Detected Yohane Mod when trying to randomize");
+           if (c.getValue().cardID.contains("Yohane")){
+              SneckoMod.logger.info("Nope: Skipping Yohane Card");
+
+           } else tmp.add(c.getKey());
+         } else tmp.add(c.getKey());
        }
      }
-
+   //  SneckoMod.logger.info("Nope - finished iterating");
 
          AbstractCard cNew;
 
@@ -116,6 +125,7 @@
        } else {
          cNew = new Madness();
        }
+    // SneckoMod.logger.info("Nope - finished assigning cNew");
 
        if ((cNew.cost >= 0) && (!cNew.hasTag(SneckoMod.SNEKPROOF))) {
          int newCost = AbstractDungeon.cardRandomRng.random(3);
@@ -125,11 +135,16 @@
            cNew.isCostModified = true;
            cNew.superFlash(Color.PURPLE.cpy());
          }
+       }
 
+     UnlockTracker.markCardAsSeen(cNew.cardID);
 
-       AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cNew));
+     // SneckoMod.logger.info("Nope - finished cost mod");
+
+       AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cNew.makeStatEquivalentCopy()));
+         //SneckoMod.logger.info("Nope - finished make temp card");
      }
-   }
+
 
 
 

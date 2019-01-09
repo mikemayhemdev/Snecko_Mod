@@ -24,6 +24,7 @@
  import java.util.*;
  import java.util.Map.Entry;
 
+ import com.megacrit.cardcrawl.unlock.UnlockTracker;
  import sneckomod.SneckoMod;
 
 
@@ -121,8 +122,8 @@
 
      while (var3.hasNext()) {
        Map.Entry<String, AbstractCard> c = (Map.Entry)var3.next();
-       if (((AbstractCard)c.getValue()).color == classColor) {
-         tmp.add(c.getKey());
+       if (c.getValue().color == classColor && c.getValue().rarity != AbstractCard.CardRarity.SPECIAL) {
+               tmp.add(c.getKey());
        }
      }
 
@@ -146,8 +147,9 @@
            cNew.superFlash(Color.PURPLE.cpy());
          }
        }
+         UnlockTracker.markCardAsSeen(cNew.cardID);
 
-       AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cNew));
+       AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cNew.makeStatEquivalentCopy()));
      }
    }
 

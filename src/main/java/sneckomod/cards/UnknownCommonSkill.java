@@ -32,7 +32,7 @@
 
      SoulboundField.soulbound.set(this, Boolean.valueOf(true));
      this.tags.add(SneckoMod.UNKNOWN);
-       this.exhaust = true;
+      // this.exhaust = true;
    }
 
 
@@ -71,6 +71,7 @@
 
      public void use(AbstractPlayer p, AbstractMonster m) {
          this.replaceUnknown(true);
-     } }
-
+         this.used = true;
+     }
+ }
 

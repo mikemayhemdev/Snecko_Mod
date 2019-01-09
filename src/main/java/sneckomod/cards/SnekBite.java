@@ -56,7 +56,6 @@
      AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 
      AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
      AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
    }
 

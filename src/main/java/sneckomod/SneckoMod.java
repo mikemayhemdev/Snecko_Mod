@@ -8,17 +8,24 @@
  import com.badlogic.gdx.files.FileHandle;
  import com.badlogic.gdx.graphics.Texture;
  import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
+ import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+ import com.megacrit.cardcrawl.characters.AbstractPlayer;
  import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+ import com.megacrit.cardcrawl.orbs.AbstractOrb;
  import com.megacrit.cardcrawl.random.Random;
  import com.megacrit.cardcrawl.rooms.AbstractRoom;
  import java.nio.charset.StandardCharsets;
+
+ import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
  import org.apache.logging.log4j.Logger;
  import sneckomod.cards.*;
+ import sneckomod.characters.SneckoCharacter;
+ import sneckomod.orbs.*;
  import sneckomod.patches.AbstractCardEnum;
  import sneckomod.patches.SneckoEnum;
 
  @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
- public class SneckoMod implements basemod.interfaces.OnStartBattleSubscriber, basemod.interfaces.PostInitializeSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, basemod.interfaces.EditStringsSubscriber
+ public class SneckoMod implements basemod.interfaces.PostBattleSubscriber, basemod.interfaces.OnStartBattleSubscriber, basemod.interfaces.PostInitializeSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, basemod.interfaces.EditStringsSubscriber
  {
    private static final com.badlogic.gdx.graphics.Color SNECKO_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(220.0F, 55.0F, 220.0F);
 
@@ -51,6 +58,7 @@
    }
 
    public static final Logger logger = org.apache.logging.log4j.LogManager.getLogger(SneckoMod.class.getName());
+   public static boolean spritealtered = false;
 
    public SneckoMod()
    {
@@ -75,6 +83,14 @@
    }
 
 
+   public static Boolean hasWarpOrb(){
+     for (AbstractOrb o : AbstractDungeon.player.orbs){
+       if (o instanceof GrandWarp){
+         return true;
+       }
+     }
+     return false;
+   }
 
 
 
@@ -116,10 +132,13 @@
      BaseMod.addCard(new sneckomod.cards.SoulCleanse());
      BaseMod.addCard(new sneckomod.cards.SoulExchange());
      BaseMod.addCard(new sneckomod.cards.SoulRoll());
+     BaseMod.addCard(new sneckomod.cards.SoulDraw());
      BaseMod.addCard(new sneckomod.cards.SnekBeam());
      BaseMod.addCard(new sneckomod.cards.MasterEye());
      BaseMod.addCard(new sneckomod.cards.PerplexingGlare());
      BaseMod.addCard(new sneckomod.cards.SingleExchange());
+
+     BaseMod.addCard(new sneckomod.cards.GrandSneckoForm());
    }
 
 
@@ -213,6 +232,8 @@
      BaseMod.loadCustomStrings(com.megacrit.cardcrawl.localization.PowerStrings.class, powerStrings);
      String charStrings = Gdx.files.internal("localization/" + language + "/Snecko-CharacterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
      BaseMod.loadCustomStrings(com.megacrit.cardcrawl.localization.CharacterStrings.class, charStrings);
+     String orbStrings = Gdx.files.internal("localization/" + language + "/Snecko-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+     BaseMod.loadCustomStrings(com.megacrit.cardcrawl.localization.OrbStrings.class, orbStrings);
      logger.info("done editing strings");
    }
 
@@ -222,6 +243,23 @@
      AbstractDungeon.actionManager.addToBottom(new sneckomod.actions.RandomizeUnknownCards());
    }
 
+   public void receivePostBattle(AbstractRoom r) {
+
+     AbstractPlayer p = AbstractDungeon.player;
+     if (p instanceof sneckomod.characters.SneckoCharacter) {
+     if (spritealtered) {
+       AbstractDungeon.effectsQueue.add(new SmokePuffEffect(p.hb.cX, p.hb.cY));
+       // AbstractDungeon.actionManager.addToBottom(new VFXAction(new DoubleSlimeParticle(AbstractDungeon.player)));
+
+         SneckoCharacter hero = (SneckoCharacter) p;
+         hero.setRenderscale(1.2F);
+       }
+
+
+       spritealtered = false;
+     }
+
+   }
 
    public void receivePostInitialize()
    {

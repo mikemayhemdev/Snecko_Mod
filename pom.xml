@@ -3,7 +3,7 @@
 
     <groupId>sneckomod</groupId>
     <artifactId>sneckomod</artifactId>
-    <version>v0.0.3</version>
+    <version>v0.0.8</version>
     <packaging>jar</packaging>
 
     <name>Snecko Mod</name>
@@ -38,6 +38,20 @@
             <scope>system</scope>
             <systemPath>${basedir}/../lib/STSLib.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>yohane</groupId>
+            <artifactId>yohane</artifactId>
+            <version>1.9.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../lib/Yohane.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>hubris</groupId>
+            <artifactId>hubris</artifactId>
+            <version>0.19.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../lib/Hubris.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
@@ -62,8 +76,8 @@
                         <configuration>
                             <target>
 
-
                                 <copy file="target\SneckoMod.jar" tofile="C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods\SneckoMod.jar"/>
+                                <copy file="target\SneckoMod.jar" tofile="C:\Users\Computer\IdeaProjects\packsnecko\content\SneckoMod.jar"/>
 
                             </target>
                         </configuration>

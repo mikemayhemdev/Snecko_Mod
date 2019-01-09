@@ -23,7 +23,7 @@
  public class PerplexingGlare extends AbstractSneckoCard
  {
    private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
-   private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.COMMON;
+   private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
    private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ALL_ENEMY;
 
 
@@ -36,8 +36,9 @@
    {
      super("Snecko:PerplexingGlare", NAME, SneckoMod.getResourcePath("cards/perplexingstare.png"), 0, DESCRIPTION, TYPE, AbstractCardEnum.SNECKO, RARITY, TARGET);
 
-     this.magicNumber = (this.baseMagicNumber = 3);
+     this.magicNumber = (this.baseMagicNumber = 2);
      this.tags.add(SneckoMod.SNEKPROOF);
+     this.exhaust = true;
    }
 
 

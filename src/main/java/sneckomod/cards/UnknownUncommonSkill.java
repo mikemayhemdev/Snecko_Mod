@@ -32,7 +32,7 @@
 
      SoulboundField.soulbound.set(this, Boolean.valueOf(true));
      this.tags.add(SneckoMod.UNKNOWN);
-       this.exhaust = true;
+     //  this.exhaust = true;
    }
 
 
@@ -70,9 +70,10 @@
    public static final String IMG_PATH = "cards/unknownUS.png";
    public static final int COST = 0;
 
-   public void use(AbstractPlayer p, AbstractMonster m) {
-       this.replaceUnknown(true);
-   }
+     public void use(AbstractPlayer p, AbstractMonster m) {
+         this.replaceUnknown(true);
+         this.used = true;
+     }
  }
 
 

@@ -7,5 +7,14 @@
 			" highest-cost cards in your hand by 1."
 
 		]
+	},
+	"Snecko:GrandSneckoPower": {
+		"NAME": "Grand Snecko Form",
+		"DESCRIPTIONS": [
+			"At the start of each turn, channel ",
+			" random Grand Snecko Orb.",
+			" random Grand Snecko Orbs."
+
+		]
 	}
 }

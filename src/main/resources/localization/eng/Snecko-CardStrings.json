@@ -19,11 +19,19 @@
   },
   "Snecko:PerplexingGlare": {
     "NAME": "Perplexing Glare",
-    "DESCRIPTION": "Snekproof. NL Each enemy gains between -3 and !M! Strength."
+    "DESCRIPTION": "Snekproof. NL Each enemy gains between -3 and !M! Strength. NL Exhaust."
+  },
+  "Snecko:GrandSneckoForm": {
+    "NAME": "Grand Form",
+    "DESCRIPTION": "Snekproof. NL Gain !M! Temporary HP. NL Gain Orb Slots until you have 4, then channel 4 random Grand Snecko Orbs. Channel another each turn."
   },
   "Snecko:SnekBeam": {
     "NAME": "Snek Beam",
     "DESCRIPTION": "Snekproof. NL Deal !D! Damage to ALL enemies. NL (Damage is equal to the number of Unknown cards you started the combat with.)"
+  },
+  "Snecko:SoulDraw": {
+    "NAME": "Soul Draw",
+    "DESCRIPTION": "Snekproof. NL Draw between 1 and 3 cards. NL Discard between 1 and !M! random cards."
   },
   "Snecko:SnekBite": {
     "NAME": "Snek Bite",

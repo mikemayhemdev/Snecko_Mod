@@ -74,7 +74,7 @@
      super.onEnterRoom(room);
      this.counter += 1;
 
-     if (this.counter == 5) {
+     if (this.counter == 8) {
        flash();
 
 

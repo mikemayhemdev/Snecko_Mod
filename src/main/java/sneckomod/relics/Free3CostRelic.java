@@ -7,6 +7,8 @@
  import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
  import com.megacrit.cardcrawl.relics.AbstractRelic;
  import java.util.ArrayList;
+
+ import com.megacrit.cardcrawl.relics.SneckoEye;
  import sneckomod.SneckoMod;
 
  public class Free3CostRelic extends CustomRelic
@@ -28,17 +30,17 @@
    }
 
 
-   public void onCardDraw(AbstractCard c)
-   {
+   public void onCardDraw(AbstractCard c) {
      super.onCardDraw(c);
-
-     if (c.cost >= 3) {
-       flash();
-       c.cost = 0;
-       c.costForTurn = c.cost;
-       c.isCostModified = true;
-       c.superFlash(Color.PURPLE.cpy());
-       this.usedThisCombat = true;
+     if (!usedThisCombat) {
+       if (c.cost >= 3) {
+         flash();
+         c.cost = 0;
+         c.costForTurn = c.cost;
+         c.isCostModified = true;
+         c.superFlash(Color.PURPLE.cpy());
+         this.usedThisCombat = true;
+       }
      }
    }
 
@@ -52,7 +54,7 @@
    }
 
    public boolean canSpawn() {
-     return AbstractDungeon.player.hasRelic("Snecko Eye");
+     return AbstractDungeon.player.hasRelic(SneckoEye.ID);
    }
 
    public void obtain()

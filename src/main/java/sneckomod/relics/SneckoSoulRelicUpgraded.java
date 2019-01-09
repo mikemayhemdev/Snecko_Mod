@@ -38,7 +38,7 @@
      super.onEnterRoom(room);
      this.counter += 1;
 
-     if (this.counter == 5) {
+     if (this.counter == 8) {
        flash();
 
 
@@ -71,7 +71,9 @@
      if (AbstractDungeon.player.hasRelic("Snecko:SneckoSoulRelic")) {
        for (int i = 0; i < AbstractDungeon.player.relics.size(); i++) {
          if (AbstractDungeon.player.relics.get(i).relicId.equals("Snecko:SneckoSoulRelic")) {
-           instantObtain(AbstractDungeon.player, i, true);
+             this.counter = AbstractDungeon.player.getRelic("Snecko:SneckoSoulRelic").counter;
+             instantObtain(AbstractDungeon.player, i, true);
+
            break;
          }
        }

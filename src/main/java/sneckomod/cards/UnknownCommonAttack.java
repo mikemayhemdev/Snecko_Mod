@@ -33,7 +33,7 @@
      SoulboundField.soulbound.set(this, Boolean.valueOf(true));
 
      this.tags.add(SneckoMod.UNKNOWN);
-       this.exhaust = true;
+     //  this.exhaust = true;
 
    }
 
@@ -63,8 +63,7 @@
      }
 
 
-
-   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Snecko:UnknownCommonAttack");
+     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Snecko:UnknownCommonAttack");
    public static final String NAME = cardStrings.NAME;
    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
    public static String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -74,6 +73,8 @@
 
      public void use(AbstractPlayer p, AbstractMonster m) {
          this.replaceUnknown(true);
-     } }
+         this.used=true;
+     }
+ }
 
 

@@ -68,7 +68,7 @@
 
    public void triggerWhenDrawn()
    {
-     if (this.cost != 0) {
+     if (this.cost != 2) {
        this.cost = 2;
        this.costForTurn = 2;
        this.isCostModified = false;

@@ -9,6 +9,7 @@
         <module name="slimebound" />
         <module name="sneckomod" />
         <module name="STSSlimeMod" />
+        <module name="STSSneckoMod" />
       </profile>
     </annotationProcessing>
   </component>
