@@ -5,7 +5,6 @@
 			"At the start of each turn, reduce the cost of the highest-cost card in your hand by 1.",
 			"At the start of each turn, reduce the cost of the ",
 			" highest-cost cards in your hand by 1."
-
 		]
 	},
 	"Snecko:GrandSneckoPower": {
@@ -14,7 +13,64 @@
 			"At the start of each turn, channel ",
 			" random Grand Snecko Orb.",
 			" random Grand Snecko Orbs."
-
+		]
+	},
+	"Snecko:ChameleonPower": {
+		"NAME": "Snechameleon",
+		"DESCRIPTIONS": [
+			"This turn: ",
+			"Red Shift NL ",
+			"Green Shift NL ",
+			"Yellow Shift NL ",
+			"Bronze Shift NL ",
+			"Pale Shift NL ",
+			"Blue Shift NL ",
+			"Dark Shift NL ",
+			"Gain ",
+			" Strength for this turn.",
+			" Dexterity for this turn.",
+			" Envenom for this turn.",
+			" Thorns for this turn.",
+			" Temporary HP for this turn.",
+			" Miasma Retaliation for this turn.",
+			" Snek of Death for this turn.",
+			"Next turn: ",
+			"Grants a random buff effect each turn. NL "
+		]
+	},
+	"Snecko:LoseEnvenomPower": {
+		"NAME": "Fleeting Envenom",
+		"DESCRIPTIONS": [
+			"Whenever you deal unblocked attack damage this turn, apply #b",
+			" #yPoison."
+		]
+	},
+	"Snecko:LoseTempHPPower": {
+		"NAME": "Fleeting Temporary HP",
+		"DESCRIPTIONS": [
+			"Lose ",
+			" Temporary HP at the start of your next turn."
+		]
+	},
+	"Snecko:LoseThornsPower": {
+		"NAME": "Fleeting Thorns",
+		"DESCRIPTIONS": [
+			"Lose ",
+			" Thorns at the start of your next turn."
+		]
+	},
+	"Snecko:VulnWeakOnHitPower": {
+		"NAME": "Miasma Retaliation",
+		"DESCRIPTIONS": [
+			"Apply ",
+			" Weak and Vulnerable to enemies who attack you this turn."
+		]
+	},
+	"Snecko:DarkPower": {
+		"NAME": "Snek of Death",
+		"DESCRIPTIONS": [
+			"Deal ",
+			" damage to a random enemy whenever you play a card this turn."
 		]
 	}
 }

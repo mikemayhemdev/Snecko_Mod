@@ -39,7 +39,7 @@
 
    public GrandSneckoForm()
    {
-     super("Snecko:GrandSneckoForm", NAME, SneckoMod.getResourcePath("cards/mastereye.png"), 3, DESCRIPTION, TYPE, AbstractCardEnum.SNECKO, RARITY, TARGET);
+     super("Snecko:GrandSneckoForm", NAME, SneckoMod.getResourcePath("cards/GSF.png"), 3, DESCRIPTION, TYPE, AbstractCardEnum.SNECKO, RARITY, TARGET);
 
      this.magicNumber = (this.baseMagicNumber = 10);
 
@@ -107,7 +107,7 @@
    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
    public static String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
    public static final String ID = "Snecko:GrandSneckoForm";
-   public static final String IMG_PATH = "cards/mastereye.png";
+   public static final String IMG_PATH = "cards/GSF.png";
    private static final int COST = 3;
    private static final int POWER = 6;
    private static final int UPGRADE_BONUS = 3;

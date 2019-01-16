@@ -1,5 +1,7 @@
  package sneckomod.actions;
 
+ import chronomuncher.cards.AbstractSelfSwitchCard;
+ import chronomuncher.cards.AbstractSwitchCard;
  import com.badlogic.gdx.graphics.Color;
  import com.evacipated.cardcrawl.modthespire.Loader;
  import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -21,6 +23,7 @@
 
  import java.util.ArrayList;
  import java.util.Iterator;
+ import java.util.Map;
  import java.util.Map.Entry;
 
 
@@ -104,18 +107,41 @@
      ArrayList<String> tmp = new ArrayList();
      Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
-     while (var3.hasNext()) {
-       Entry<String, AbstractCard> c = (Entry)var3.next();
-       if (((AbstractCard)c.getValue()).type == c2.type && c.getValue().rarity != AbstractCard.CardRarity.SPECIAL) {
-         if (Loader.isModLoaded("Yohane")){
-           SneckoMod.logger.info("Nope: Detected Yohane Mod when trying to randomize");
-           if (c.getValue().cardID.contains("Yohane")){
-              SneckoMod.logger.info("Nope: Skipping Yohane Card");
 
-           } else tmp.add(c.getKey());
-         } else tmp.add(c.getKey());
+       boolean validCard = true;
+
+       while (var3.hasNext()) {
+           Map.Entry<String, AbstractCard> c = (Map.Entry)var3.next();
+           if (((AbstractCard)c.getValue()).type == c2.type && c.getValue().rarity != AbstractCard.CardRarity.SPECIAL) {
+
+               if (Loader.isModLoaded("Yohane")){
+                   //SneckoMod.logger.info("Detected Yohane Mod when trying to randomize");
+                   if (c.getValue().cardID.contains("Yohane")){
+                       // SneckoMod.logger.info("Skipping Yohane Card");
+                       validCard = false;
+                   }
+               }
+
+               //Disciple Switch cards break.  Blacklisting.
+               /*
+               if (Loader.isModLoaded("chronomuncher")){
+                   if (c instanceof AbstractSwitchCard){
+                       validCard = false;
+                   }
+                   if (c instanceof AbstractSelfSwitchCard){
+                       validCard = false;
+                   }
+               }
+               */
+
+
+
+               if (validCard) tmp.add(c.getKey());
+
+
+
+           }
        }
-     }
    //  SneckoMod.logger.info("Nope - finished iterating");
 
          AbstractCard cNew;
@@ -141,7 +167,7 @@
 
      // SneckoMod.logger.info("Nope - finished cost mod");
 
-       AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cNew.makeStatEquivalentCopy()));
+       AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CardLibrary.getCopy(cNew.cardID)));
          //SneckoMod.logger.info("Nope - finished make temp card");
      }
 

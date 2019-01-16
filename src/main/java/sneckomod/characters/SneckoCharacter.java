@@ -1,5 +1,6 @@
  package sneckomod.characters;
 
+ import basemod.BaseMod;
  import basemod.ReflectionHacks;
  import basemod.abstracts.CustomPlayer;
  import com.badlogic.gdx.graphics.Color;
@@ -216,7 +217,6 @@
    {
      return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[5];
    }
-
 
 
 

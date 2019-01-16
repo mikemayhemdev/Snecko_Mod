@@ -59,7 +59,7 @@
          count++;
        }
      }
-     AbstractDungeon.actionManager.addToBottom(new com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, count));
+     AbstractDungeon.actionManager.addToBottom(new com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, count / 2));
    }
 
    public boolean canSpawn() {

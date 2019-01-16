@@ -66,7 +66,7 @@
          count++;
        }
      }
-     AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, count));
+     AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, count / 2));
    }
 
    public void onEnterRoom(AbstractRoom room)

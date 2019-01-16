@@ -3,14 +3,14 @@
     "NAME": "Snecko Soul",
     "FLAVOR": "???????????",
     "DESCRIPTIONS": [
-      "On pickup, add 6 random #yUnknown cards to your deck. NL At the start of combat, gain 1 Temporary HP for each #yUnknown card in your deck. NL Every 5 rooms, add a random #yUnknown card to your deck."
+      "On pickup, add 6 random #yUnknown cards to your deck. NL At the start of combat, gain 1 Temporary HP for every 2 #yUnknown cards in your deck. NL Every 8 rooms, add a random #yUnknown card to your deck."
     ]
   },
   "Snecko:SneckoSoulRelicUpgraded": {
     "NAME": "Super Snecko Soul",
     "FLAVOR": "?!?!?!?!???!",
     "DESCRIPTIONS": [
-      "Replaces #gSnecko #gSoul.  NL At the start of combat, gain 1 Temporary HP for each #yUnknown card in your deck. Every 5 rooms, add a random #yUnknown #yRare card to your deck."
+      "Replaces #gSnecko #gSoul.  NL At the start of combat, gain 1 Temporary HP for every 2 #yUnknown cards in your deck. Every 8 rooms, add a random #yUnknown #yRare card to your deck."
     ]
   },
   "Snecko:ReduceCostRelic": {

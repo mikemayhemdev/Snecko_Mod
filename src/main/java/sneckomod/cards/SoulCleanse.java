@@ -45,8 +45,7 @@
        ((SneckoCharacter)p).eyeAnim();
      }
 
-     if (this.upgraded) { AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-     }
+
      for (AbstractCard c : p.hand.group) {
        if (c.cost >= 3) {
          c.cost = 0;
@@ -56,6 +55,8 @@
          break;
        }
      }
+       if (this.upgraded) { AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+       }
    }
 
 

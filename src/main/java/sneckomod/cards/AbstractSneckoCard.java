@@ -1,6 +1,8 @@
  package sneckomod.cards;
 
  import basemod.abstracts.CustomCard;
+ import chronomuncher.cards.AbstractSelfSwitchCard;
+ import chronomuncher.cards.AbstractSwitchCard;
  import com.evacipated.cardcrawl.modthespire.Loader;
  import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
  import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -62,6 +64,7 @@
 
      ArrayList<String> tmp = new ArrayList();
      Iterator var3 = CardLibrary.cards.entrySet().iterator();
+     boolean validCard = true;
 
      while (var3.hasNext()) {
        Map.Entry<String, AbstractCard> c = (Map.Entry)var3.next();
@@ -71,9 +74,25 @@
                //SneckoMod.logger.info("Detected Yohane Mod when trying to randomize");
                if (c.getValue().cardID.contains("Yohane")){
                   // SneckoMod.logger.info("Skipping Yohane Card");
+                    validCard = false;
+               }
+           }
 
-               } else tmp.add(c.getKey());
-           } else tmp.add(c.getKey());
+           //Disciple Switch cards break.  Blacklisting.
+           /*
+           if (Loader.isModLoaded("chronomuncher")){
+                if (c instanceof AbstractSwitchCard){
+                    validCard = false;
+                }
+               if (c instanceof AbstractSelfSwitchCard){
+                   validCard = false;
+               }
+           }
+           */
+
+
+
+           if (validCard) tmp.add(c.getKey());
 
 
 
@@ -94,6 +113,7 @@
 
 
 
+
        if ((cUnknown.cost >= 0) && (!cUnknown.hasTag(SneckoMod.SNEKPROOF)) && cUnknown.rarity != CardRarity.BASIC && cUnknown.rarity != CardRarity.SPECIAL) {
            int newCost = AbstractDungeon.cardRandomRng.random(3);
          if (cUnknown.cost != newCost) {
@@ -107,10 +127,10 @@
 
        if (!toHand) {
          p.drawPile.removeCard(this);
-         AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown.makeStatEquivalentCopy());
+         AbstractDungeon.player.drawPile.addToRandomSpot(CardLibrary.getCopy(cUnknown.cardID));
        } else {
 
-           AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cUnknown.makeStatEquivalentCopy(),1, true));
+           AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CardLibrary.getCopy(cUnknown.cardID),1, true));
        }
      }
    }

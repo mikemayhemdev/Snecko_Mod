@@ -19,6 +19,7 @@
  import com.megacrit.cardcrawl.monsters.AbstractMonster;
  import java.util.ArrayList;
  import sneckomod.SneckoMod;
+ import sneckomod.patches.AbstractCardEnum;
  import sneckomod.vfx.GreenBeamEffect;
 
  public class SnekBeam extends AbstractSneckoCard
@@ -35,7 +36,7 @@
 
    public SnekBeam()
    {
-     super("Snecko:SnekBeam", NAME, SneckoMod.getResourcePath("cards/snekbeam.png"), 2, DESCRIPTION, TYPE, AbstractCard.CardColor.COLORLESS, RARITY, TARGET);
+     super("Snecko:SnekBeam", NAME, SneckoMod.getResourcePath("cards/snekbeam.png"), 2, DESCRIPTION, TYPE, AbstractCardEnum.SNECKO, RARITY, TARGET);
 
      this.baseDamage = 0;
 

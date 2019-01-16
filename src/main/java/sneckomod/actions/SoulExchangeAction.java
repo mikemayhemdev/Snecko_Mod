@@ -1,6 +1,9 @@
  package sneckomod.actions;
 
+ import chronomuncher.cards.AbstractSelfSwitchCard;
+ import chronomuncher.cards.AbstractSwitchCard;
  import com.badlogic.gdx.graphics.Color;
+ import com.evacipated.cardcrawl.modthespire.Loader;
  import com.megacrit.cardcrawl.actions.AbstractGameAction;
  import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
  import com.megacrit.cardcrawl.actions.GameActionManager;
@@ -120,13 +123,41 @@
      ArrayList<String> tmp = new ArrayList();
      Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
-     while (var3.hasNext()) {
-       Map.Entry<String, AbstractCard> c = (Map.Entry)var3.next();
-       if (c.getValue().color == classColor && c.getValue().rarity != AbstractCard.CardRarity.SPECIAL) {
-               tmp.add(c.getKey());
-       }
-     }
 
+       boolean validCard = true;
+
+       while (var3.hasNext()) {
+           Map.Entry<String, AbstractCard> c = (Map.Entry)var3.next();
+             if (c.getValue().color == classColor && c.getValue().rarity != AbstractCard.CardRarity.SPECIAL) {
+
+               if (Loader.isModLoaded("Yohane")){
+                   //SneckoMod.logger.info("Detected Yohane Mod when trying to randomize");
+                   if (c.getValue().cardID.contains("Yohane")){
+                       // SneckoMod.logger.info("Skipping Yohane Card");
+                       validCard = false;
+                   }
+               }
+
+               //Disciple Switch cards break.  Blacklisting.
+                 /*
+               if (Loader.isModLoaded("chronomuncher")){
+                   if (c instanceof AbstractSwitchCard){
+                       validCard = false;
+                   }
+                   if (c instanceof AbstractSelfSwitchCard){
+                       validCard = false;
+                   }
+               }
+               */
+
+
+
+               if (validCard) tmp.add(c.getKey());
+
+
+
+           }
+       }
 
 
      for (int i = 0; i < cardsToReplace; i++) {
@@ -149,7 +180,7 @@
        }
          UnlockTracker.markCardAsSeen(cNew.cardID);
 
-       AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cNew.makeStatEquivalentCopy()));
+       AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CardLibrary.getCopy(cNew.cardID)));
      }
    }
 

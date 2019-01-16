@@ -3,18 +3,26 @@
  import basemod.BaseMod;
  import basemod.ModPanel;
  import basemod.helpers.RelicType;
+ import chronomuncher.cards.AbstractSelfSwitchCard;
+ import chronomuncher.cards.AbstractSwitchCard;
  import com.badlogic.gdx.Files;
  import com.badlogic.gdx.Gdx;
  import com.badlogic.gdx.files.FileHandle;
  import com.badlogic.gdx.graphics.Texture;
+ import com.evacipated.cardcrawl.modthespire.Loader;
  import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
  import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+ import com.megacrit.cardcrawl.cards.AbstractCard;
  import com.megacrit.cardcrawl.characters.AbstractPlayer;
  import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+ import com.megacrit.cardcrawl.helpers.CardLibrary;
  import com.megacrit.cardcrawl.orbs.AbstractOrb;
  import com.megacrit.cardcrawl.random.Random;
  import com.megacrit.cardcrawl.rooms.AbstractRoom;
  import java.nio.charset.StandardCharsets;
+ import java.util.ArrayList;
+ import java.util.Iterator;
+ import java.util.Map;
 
  import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
  import org.apache.logging.log4j.Logger;
@@ -138,7 +146,15 @@
      BaseMod.addCard(new sneckomod.cards.PerplexingGlare());
      BaseMod.addCard(new sneckomod.cards.SingleExchange());
 
-     BaseMod.addCard(new sneckomod.cards.GrandSneckoForm());
+     if (Loader.isModLoaded("hubris")) {
+       BaseMod.addCard(new sneckomod.cards.GrandSneckoForm());
+     }
+     if (Loader.isModLoaded("ReplayTheSpireMod")) {
+       BaseMod.addCard(new sneckomod.cards.ColorShift());
+     }
+     if (Loader.isModLoaded("infinitespire")) {
+       BaseMod.addCard(new sneckomod.cards.BlackTutor());
+     }
    }
 
 

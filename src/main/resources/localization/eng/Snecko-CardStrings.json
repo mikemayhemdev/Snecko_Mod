@@ -9,8 +9,13 @@
   },
   "Snecko:MasterEye": {
     "NAME": "Master Eye",
-    "DESCRIPTION": "Snekproof. NL At the start of each turn, reduce the cost of highest-cost card in your hand by 1.",
+    "DESCRIPTION": "Snekproof. NL At the start of each turn, reduce the cost of the highest-cost card in your hand by 1.",
     "UPGRADE_DESCRIPTION": "Innate, Snekproof. NL At the start of each turn, reduce the cost of the highest-cost card in your hand by 1."
+  },
+  "Snecko:BlackTutor": {
+    "NAME": "Nightmare Vision",
+    "DESCRIPTION": "Snekproof. NL Lose 5 HP. NL Add either a Status, Curse, or [#180055]Black Card[] to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Snekproof. NL Lose 5 HP. NL Add either 2 Statuses, 2 Curses, or 2 [#180055]Black Cards[] to your hand. NL Exhaust."
   },
   "Snecko:SingleExchange": {
     "NAME": "Nope",
@@ -23,7 +28,7 @@
   },
   "Snecko:GrandSneckoForm": {
     "NAME": "Grand Form",
-    "DESCRIPTION": "Snekproof. NL Gain !M! Temporary HP. NL Gain Orb Slots until you have 4, then channel 4 random Grand Snecko Orbs. Channel another each turn."
+    "DESCRIPTION": "Snekproof. NL Gain !M! Temporary HP. NL Gain Orb Slots until you have 4, then channel 4 random Grand Orbs. Channel another each turn."
   },
   "Snecko:SnekBeam": {
     "NAME": "Snek Beam",
@@ -100,5 +105,9 @@
     "NAME": "Big Snek Power",
     "DESCRIPTION": "Soulbound. NL Unknown Rare Power.",
     "UPGRADE_DESCRIPTION": "Soulbound. NL Unknown Upgraded Rare Power."
+  },
+  "Snecko:ColorShift": {
+    "NAME": "Snechameleon",
+    "DESCRIPTION": "Snekproof. NL Gain a random buff effect at the start of each turn."
   }
 }
