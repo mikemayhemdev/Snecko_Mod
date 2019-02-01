@@ -3,7 +3,7 @@
   "name": "Snecko Mod",
   "author_list": ["Michael Mayhem"],
   "description": "Adds a new silly playable Snecko character: The Perplexed. ",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "sts_version": "01-03-2019",
   "mts_version": "3.6.3",
   "dependencies": ["basemod", "stslib"],

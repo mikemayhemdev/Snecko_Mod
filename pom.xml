@@ -3,7 +3,7 @@
 
     <groupId>sneckomod</groupId>
     <artifactId>sneckomod</artifactId>
-    <version>v0.0.14</version>
+    <version>v0.0.15</version>
     <packaging>jar</packaging>
 
     <name>Snecko Mod</name>

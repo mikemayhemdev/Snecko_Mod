@@ -11,9 +11,11 @@
  import com.badlogic.gdx.graphics.Texture;
  import com.evacipated.cardcrawl.modthespire.Loader;
  import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
+ import com.google.gson.Gson;
  import com.megacrit.cardcrawl.actions.defect.ChannelAction;
  import com.megacrit.cardcrawl.cards.AbstractCard;
  import com.megacrit.cardcrawl.characters.AbstractPlayer;
+ import com.megacrit.cardcrawl.core.Settings;
  import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
  import com.megacrit.cardcrawl.helpers.CardLibrary;
  import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -165,10 +167,28 @@
 
 
    public void receiveEditKeywords()
-   {
-     BaseMod.addKeyword(new String[] { "unknown" }, "Soulbound.  Each combat, transforms into a random card from any class, with a randomized cost.");
+   {  String language;
+     final Gson gson = new Gson();
 
-     BaseMod.addKeyword(new String[] { "snekproof" }, "Cost cannot be randomized.");
+     switch (Settings.language) {
+
+       case KOR:
+         language = "kor";
+         break;
+
+       default:
+         language = "eng";
+     }
+
+     logger.info("begin editing strings");
+     final String json = Gdx.files.internal("localization/" + language + "/Slimebound-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+
+     final com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = (com.evacipated.cardcrawl.mod.stslib.Keyword[])gson.fromJson(json, (Class) com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
+     if (keywords != null) {
+       for (final com.evacipated.cardcrawl.mod.stslib.Keyword keyword : keywords) {
+         BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+       }
+     }
    }
 
 
@@ -235,9 +255,17 @@
 
    public void receiveEditStrings()
    {
-     String language = "eng";
 
+     String language;
+     switch (Settings.language) {
 
+       case KOR:
+         language = "kor";
+         break;
+
+       default:
+         language = "eng";
+     }
 
      logger.info("begin editing strings");
      String relicStrings = Gdx.files.internal("localization/" + language + "/Snecko-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
@@ -250,6 +278,8 @@
      BaseMod.loadCustomStrings(com.megacrit.cardcrawl.localization.CharacterStrings.class, charStrings);
      String orbStrings = Gdx.files.internal("localization/" + language + "/Snecko-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
      BaseMod.loadCustomStrings(com.megacrit.cardcrawl.localization.OrbStrings.class, orbStrings);
+     String keywordStrings = Gdx.files.internal("localization/" + language + "/Snecko-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+     BaseMod.loadCustomStrings(com.megacrit.cardcrawl.localization.OrbStrings.class, keywordStrings);
      logger.info("done editing strings");
    }
 

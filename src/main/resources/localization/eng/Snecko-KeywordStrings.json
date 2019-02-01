@@ -1,0 +1,16 @@
+[
+     {
+      "NAMES": [
+        "unknown"
+      ],
+      "PROPERNAME": "Unknown",
+      "DESCRIPTION": "Soulbound.  Each combat, transforms into a random card from any class, with a randomized cost."
+    },
+    {
+      "NAMES": [
+        "snekproof"
+      ],
+      "PROPERNAME": "Snekproof",
+      "DESCRIPTION": "Cost cannot be randomized."
+    }
+]

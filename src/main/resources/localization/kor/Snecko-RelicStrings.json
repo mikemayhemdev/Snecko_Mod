@@ -1,0 +1,30 @@
+{
+  "Snecko:SneckoSoulRelic": {
+    "NAME": "Snecko Soul",
+    "FLAVOR": "???????????",
+    "DESCRIPTIONS": [
+      "On pickup, add 6 random #yUnknown cards to your deck. NL At the start of combat, gain 1 Temporary HP for every 2 #yUnknown cards in your deck. NL Every 8 rooms, add a random #yUnknown card to your deck."
+    ]
+  },
+  "Snecko:SneckoSoulRelicUpgraded": {
+    "NAME": "Super Snecko Soul",
+    "FLAVOR": "?!?!?!?!???!",
+    "DESCRIPTIONS": [
+      "Replaces #gSnecko #gSoul.  NL At the start of combat, gain 1 Temporary HP for every 2 #yUnknown cards in your deck. Every 8 rooms, add a random #yUnknown #yRare card to your deck."
+    ]
+  },
+  "Snecko:ReduceCostRelic": {
+    "NAME": "Snecko Talon",
+    "FLAVOR": "???????????",
+    "DESCRIPTIONS": [
+      "At the start of your turn, reduce the cost of the most expensive card in your hand by 1."
+    ]
+  },
+  "Snecko:Free3CostRelic": {
+    "NAME": "Super Snecko Eye",
+    "FLAVOR": "???????????",
+    "DESCRIPTIONS": [
+      "Replaces #gSnecko #gEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. NL Once per combat, when you draw a card that costs 3 or more, reduce its cost to 0."
+    ]
+  }
+}
