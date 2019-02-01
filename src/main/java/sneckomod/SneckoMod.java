@@ -181,7 +181,7 @@
      }
 
      logger.info("begin editing strings");
-     final String json = Gdx.files.internal("localization/" + language + "/Slimebound-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+     final String json = Gdx.files.internal("localization/" + language + "/Snecko-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
 
      final com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = (com.evacipated.cardcrawl.mod.stslib.Keyword[])gson.fromJson(json, (Class) com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
      if (keywords != null) {
