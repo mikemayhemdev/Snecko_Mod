@@ -1,16 +1,16 @@
 [
      {
       "NAMES": [
-        "unknown"
+        "정체불명"
       ],
-      "PROPERNAME": "Unknown",
-      "DESCRIPTION": "Soulbound.  Each combat, transforms into a random card from any class, with a randomized cost."
+      "PROPERNAME": "정체불명",
+      "DESCRIPTION": "귀속. 매 전투 마다 무작위 직업의 무작위 카드로 비용을 무작위로 지정하여 변화합니다."
     },
     {
       "NAMES": [
-        "snekproof"
+        "스네코면역"
       ],
-      "PROPERNAME": "Snekproof",
-      "DESCRIPTION": "Cost cannot be randomized."
+      "PROPERNAME": "스네코면역",
+      "DESCRIPTION": "비용이 무작위로 지정되지 않습니다."
     }
 ]
