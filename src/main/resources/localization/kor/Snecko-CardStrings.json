@@ -1,113 +1,113 @@
 {
   "Snecko:Strike_Snecko": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "타격",
+    "DESCRIPTION": "피해를 !D! 줍니다."
   },
   "Snecko:Defend_Snecko": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "수비",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다."
   },
   "Snecko:MasterEye": {
-    "NAME": "Master Eye",
-    "DESCRIPTION": "Snekproof. NL At the start of each turn, reduce the cost of the highest-cost card in your hand by 1.",
-    "UPGRADE_DESCRIPTION": "Innate, Snekproof. NL At the start of each turn, reduce the cost of the highest-cost card in your hand by 1."
+    "NAME": "마스터 아이",
+    "DESCRIPTION": "스네코면역. NL 매 턴이 시작할 때, 내 손에 있는 가장 높은 비용의 카드 1 장의 비용을 1 로 줄입니다.",
+    "UPGRADE_DESCRIPTION": "선천성, 스네코면역. NL 매 턴이 시작할 때, 내 손에 있는 가장 높은 비용의 카드 1 장의 비용을 1 로 줄입니다."
   },
   "Snecko:BlackTutor": {
-    "NAME": "Nightmare Vision",
-    "DESCRIPTION": "Snekproof. NL Lose 5 HP. NL Add either a Status, Curse, or [#180055]Black Card[] to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Snekproof. NL Lose 5 HP. NL Add either 2 Statuses, 2 Curses, or 2 [#180055]Black Cards[] to your hand. NL Exhaust."
+    "NAME": "악몽 시야",
+    "DESCRIPTION": "스네코면역. NL 체력을 5 잃습니다. NL 상태이상, 저주, [#180055]흑색 카드[] 중 한 종류를 1장 무작위로 손에 넣습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "스네코면역. NL 체력을 5 잃습니다. NL 상태이상, 저주, [#180055]흑색 카드[] 중 한 종류를 2장 무작위로 손에 넣습니다. NL 소멸."
   },
   "Snecko:SingleExchange": {
-    "NAME": "Nope",
-    "DESCRIPTION": "Snekproof. NL Exhaust a card in your hand. Replace it with a random card of the same type, with a randomized cost.",
-    "UPGRADE_DESCRIPTION": "Snekproof. NL Draw a card. NL Exhaust a card in your hand. Replace it with a random card of the same type, with a randomized cost."
+    "NAME": "안돼",
+    "DESCRIPTION": "스네코면역. NL 내 손에 있는 카드 1 장을 소멸 시킵니다. 같은 속성의 무작위 카드를 1 장 무작위화 한 비용으로 얻습니다.",
+    "UPGRADE_DESCRIPTION": "스네코면역. NL 카드 1 장을 뽑습니다. NL 내 손에 있는 카드 1 장을 소멸 시킵니다. 같은 속성의 무작위 카드를 1 장 무작위화 한 비용으로 얻습니다."
   },
   "Snecko:PerplexingGlare": {
-    "NAME": "Perplexing Glare",
-    "DESCRIPTION": "Snekproof. NL Each enemy gains between -3 and !M! Strength. NL Exhaust."
+    "NAME": "당황스러운 반짝임",
+    "DESCRIPTION": "스네코면역. NL 모든 적이 -3 에서 !M! 사이의 힘을 얻습니다. NL 소멸."
   },
   "Snecko:GrandSneckoForm": {
-    "NAME": "Grand Form",
-    "DESCRIPTION": "Snekproof. NL Gain !M! Temporary HP. NL Gain Orb Slots until you have 4, then channel 4 random Grand Orbs. Channel another each turn."
+    "NAME": "거대화의 형상",
+    "DESCRIPTION": "스네코면역. NL 임시 체력을 !M! 얻습니다. NL 구체 슬롯을 4 개 까지 얻고, 4 개의 무작위 거대한 스네코 구체를 영창합니다. 매 턴 다른 구체를 영창합니다."
   },
   "Snecko:SnekBeam": {
-    "NAME": "Snek Beam",
-    "DESCRIPTION": "Snekproof. NL Deal !D! Damage to ALL enemies. NL (Damage is equal to the number of Unknown cards you started the combat with.)"
+    "NAME": "스네코 빔",
+    "DESCRIPTION": "스네코면역. NL 모든 적에게 피해를 !D! 줍니다. NL (피해량은 전투가 시작할 때 갖고 있던 미지 카드의 갯수와 같습니다.)"
   },
   "Snecko:SoulDraw": {
-    "NAME": "Soul Draw",
-    "DESCRIPTION": "Snekproof. NL Draw between 1 and 3 cards. NL Discard between 1 and !M! random cards."
+    "NAME": "영혼 뽑기",
+    "DESCRIPTION": "스네코면역. NL 1 장에서 3 장 사이의 카드를 뽑습니다. NL 1 장에서 !M! 장 사이의 무작위 카드를 버립니다."
   },
   "Snecko:SnekBite": {
-    "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! Damage. NL Draw a card."
+    "NAME": "스네코 물기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다."
   },
   "Snecko:TailWhip": {
-    "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! Damage. NL Apply !M! Vulnerable. NL Apply !M! Weak."
+    "NAME": "꼬리 휩쓸기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL 약화를 !M! 부여합니다."
   },
   "Snecko:SoulExchange": {
-    "NAME": "Soul Exchange",
-    "DESCRIPTION": "Snekproof. NL Draw a card, then Exhaust a card. Exhaust your hand, replacing them with random cards of the Exhausted card's class with randomized costs.",
-    "UPGRADE_DESCRIPTION": "Snekproof. NL Draw 2 cards, then Exhaust a card. Exhaust your hand, replacing them with random cards of the Exhausted card's class with randomized costs."
+    "NAME": "영혼 교체",
+    "DESCRIPTION": "스네코면역. NL 카드를 1 장 뽑고 내 손에 있는 카드를 1 장 소멸 시킵니다. 소멸된 카드의 직업과 같은 직업의 무작위 카드를 1 장 무작위화 한 비용으로 얻습니다.",
+    "UPGRADE_DESCRIPTION": "스네코면역. NL 카드를 2 장 뽑고 내 손에 있는 카드를 1 장 소멸 시킵니다. 소멸된 카드의 직업과 같은 직업의 무작위 카드를 1 장 무작위화 한 비용으로 얻습니다."
   },
   "Snecko:SoulCleanse": {
-    "NAME": "Soul Cleanse",
-    "DESCRIPTION": "Snekproof. NL Reduce the cost of a random card that costs 3 or more in your hand to 0.",
-    "UPGRADE_DESCRIPTION": "Snekproof. NL Draw a card. NL Reduce the cost of a random card that costs 3 or more in your hand to 0."
+    "NAME": "영혼 정화",
+    "DESCRIPTION": "스네코면역. NL 내 손에 있는 카드 중 비용이 3 이상인 카드의 비용을 0 으로 줄입니다.",
+    "UPGRADE_DESCRIPTION": "스네코면역. NL 카드를 1 장 뽑습니다. NL 내 손에 있는 카드 중 비용이 3이상인 카드의 비용을 0으로 줄입니다."
   },
   "Snecko:SoulRoll": {
-    "NAME": "Soul Roll",
-    "DESCRIPTION": "Snekproof. NL Randomize the cost of cards in your hand.",
-    "UPGRADE_DESCRIPTION": "Snekproof. NL Draw a card. NL Randomize the cost of cards in your hand."
+    "NAME": "영혼 주사위",
+    "DESCRIPTION": "스네코면역. NL 내 손에 있는 카드의 비용을 무작위로 지정합니다.",
+    "UPGRADE_DESCRIPTION": "스네코면역. NL 카드를 1 장 뽑습니다. NL 내 손에 있는 카드의 비용을 무작위로 지정합니다."
   },
   "Snecko:UnknownCommonAttack": {
-    "NAME": "Lil Snek Attack",
-    "DESCRIPTION": "Soulbound. NL Unknown Common Attack.",
-    "UPGRADE_DESCRIPTION": "Soulbound. NL Unknown Upgraded Common Attack."
+    "NAME": "소심한 스네코 공격",
+    "DESCRIPTION": "귀속. NL 알 수 없는 일반 공격 카드입니다.",
+    "UPGRADE_DESCRIPTION": "귀속. NL 알 수 없는 강화된 일반 공격 카드입니다."
   },
   "Snecko:UnknownUncommonAttack": {
-    "NAME": "Snek Attack",
-    "DESCRIPTION": "Soulbound. NL Unknown Uncommon Attack.",
-    "UPGRADE_DESCRIPTION": "Soulbound. NL Unknown Upgraded Uncommon Attack."
+    "NAME": "스네코 공격",
+    "DESCRIPTION": "귀속. NL 알 수 없는 특별 공격 카드입니다.",
+    "UPGRADE_DESCRIPTION": "귀속. NL 알 수 없는 강화된 특별 공격 카드입니다."
   },
   "Snecko:UnknownRareAttack": {
-    "NAME": "Big Snek Attack",
-    "DESCRIPTION": "Soulbound. NL Unknown Rare Attack.",
-    "UPGRADE_DESCRIPTION": "Soulbound. NL Unknown Upgraded Rare Attack."
+    "NAME": "대담한 스네코 공격",
+    "DESCRIPTION": "귀속. NL 알 수 없는 희귀 공격 카드입니다.",
+    "UPGRADE_DESCRIPTION": "귀속. NL 알 수 없는 강화된 희귀 공격 카드입니다."
   },
   "Snecko:UnknownCommonSkill": {
-    "NAME": "Lil Snek Skill",
-    "DESCRIPTION": "Soulbound. NL Unknown Common Skill.",
-    "UPGRADE_DESCRIPTION": "Soulbound. NL Unknown Upgraded Common Skill."
+    "NAME": "소심한 스네코 스킬",
+    "DESCRIPTION": "귀속. NL 알 수 없는 일반 스킬 카드입니다.",
+    "UPGRADE_DESCRIPTION": "귀속. NL 알 수 없는 강화된 일반 스킬 카드입니다."
   },
   "Snecko:UnknownUncommonSkill": {
-    "NAME": "Snek Skill",
-    "DESCRIPTION": "Soulbound. NL Unknown Uncommon Skill.",
-    "UPGRADE_DESCRIPTION": "Soulbound. NL Unknown Upgraded Uncommon Skill."
+    "NAME": "스네코 스킬",
+    "DESCRIPTION": "귀속. NL 알 수 없는 특별 스킬 카드입니다.",
+    "UPGRADE_DESCRIPTION": "귀속. NL 알 수 없는 강화된 특별 스킬 카드입니다."
   },
   "Snecko:UnknownRareSkill": {
-    "NAME": "Big Snek Skill",
-    "DESCRIPTION": "Soulbound. NL Unknown Rare Skill.",
-    "UPGRADE_DESCRIPTION": "Soulbound. NL Unknown Upgraded Rare Skill."
+    "NAME": "대담한 스네코 스킬",
+    "DESCRIPTION": "귀속. NL 알 수 없는 희귀 스킬 카드입니다.",
+    "UPGRADE_DESCRIPTION": "귀속. NL 알 수 없는 강화된 스킬 카드입니다."
   },
   "Snecko:UnknownCommonPower": {
-    "NAME": "Lil Snek Power",
-    "DESCRIPTION": "Soulbound. NL Unknown Common Power.",
-    "UPGRADE_DESCRIPTION": "Soulbound. NL Unknown Upgraded Common Power."
+    "NAME": "소심한 스네코 파워",
+    "DESCRIPTION": "귀속. NL 알 수 없는 일반 파워 카드입니다.",
+    "UPGRADE_DESCRIPTION": "귀속. NL 알 수 없는 강화된 일반 파워 카드입니다."
   },
   "Snecko:UnknownUncommonPower": {
-    "NAME": "Snek Power",
-    "DESCRIPTION": "Soulbound. NL Unknown Uncommon Power.",
-    "UPGRADE_DESCRIPTION": "Soulbound. NL Unknown Upgraded Uncommon Power."
+    "NAME": "스네코 파워",
+    "DESCRIPTION": "귀속. NL 알 수 없는 특별 파워 카드입니다.",
+    "UPGRADE_DESCRIPTION": "귀속. NL 알 수 없는 강화된 특별 파워 카드입니다."
   },
   "Snecko:UnknownRarePower": {
-    "NAME": "Big Snek Power",
-    "DESCRIPTION": "Soulbound. NL Unknown Rare Power.",
-    "UPGRADE_DESCRIPTION": "Soulbound. NL Unknown Upgraded Rare Power."
-  },
+    "NAME": "대담한 스네코 파워",
+    "DESCRIPTION": "귀속. NL 알 수 없는 희귀 파워 카드입니다.",
+    "UPGRADE_DESCRIPTION": "귀속. NL 알 수 없는 강화된 특별 파워 카드입니다."
+ },
   "Snecko:ColorShift": {
-    "NAME": "Snechameleon",
-    "DESCRIPTION": "Snekproof. NL Gain a random buff effect at the start of each turn."
+    "NAME": "스네카멜레온",
+    "DESCRIPTION": "스네코면역. NL 매 턴 무작위 버프 효과를 얻습니다."
   }
 }

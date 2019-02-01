@@ -1,76 +1,76 @@
 {
 	"Snecko:MasterEyePower": {
-		"NAME": "Master Eye",
+		"NAME": "마스터 아이",
 		"DESCRIPTIONS": [
-			"At the start of each turn, reduce the cost of the highest-cost card in your hand by 1.",
-			"At the start of each turn, reduce the cost of the ",
-			" highest-cost cards in your hand by 1."
+			"내 턴이 시작할 때, 내 손에 있는 가장 높은 비용의 카드 1장의 비용을 1로 줄입니다.",
+			"내 턴이 시작할 때, 내 손에 있는 가장 높은 비용의 카드 ",
+			" 장의 비용을 1로 줄입니다."
 		]
 	},
 	"Snecko:GrandSneckoPower": {
-		"NAME": "Grand Snecko Form",
+		"NAME": "거대한 스네코의 형상",
 		"DESCRIPTIONS": [
-			"At the start of each turn, channel ",
-			" random Grand Snecko Orb.",
-			" random Grand Snecko Orbs."
+			"내 턴이 시작할 때 ",
+			" 개의 거대한 스네코 구체를 영창 합니다."
+
 		]
 	},
 	"Snecko:ChameleonPower": {
-		"NAME": "Snechameleon",
+		"NAME": "스네카멜레온",
 		"DESCRIPTIONS": [
-			"This turn: ",
-			"Red Shift NL ",
-			"Green Shift NL ",
-			"Yellow Shift NL ",
-			"Bronze Shift NL ",
-			"Pale Shift NL ",
-			"Blue Shift NL ",
-			"Dark Shift NL ",
-			"Gain ",
-			" Strength for this turn.",
-			" Dexterity for this turn.",
-			" Envenom for this turn.",
-			" Thorns for this turn.",
-			" Temporary HP for this turn.",
-			" Miasma Retaliation for this turn.",
-			" Snek of Death for this turn.",
-			"Next turn: ",
-			"Grants a random buff effect each turn. NL "
+			"이번 턴 : ",
+			"붉은색 변환 NL ",
+			"초록색 변환 NL ",
+			"노란색 변환 NL ",
+			"청동색 변환 NL ",
+			"흐릿한 색 변환 NL ",
+			"파란색 변환 NL ",
+			"암흑 변환 NL ",
+			"이번 턴만 ",
+			" 힘을 얻습니다.",
+			" 민첩을 얻습니다.",
+			" 독바르기를 얻습니다.",
+			" 가시를 얻습니다.",
+			" 임시 체력을 얻습니다.",
+			" 독안개 보호막을 얻습니다.",
+			" 죽음의 스네코 를 얻습니다.",
+			"다음 턴 : ",
+			"매 턴 무작위 버프 효과를 얻습니다. NL "
 		]
 	},
 	"Snecko:LoseEnvenomPower": {
-		"NAME": "Fleeting Envenom",
+		"NAME": "희미한 독바르기",
 		"DESCRIPTIONS": [
-			"Whenever you deal unblocked attack damage this turn, apply #b",
-			" #yPoison."
+			"이번 턴 막히지 않은 공격 피해를 줄 때 마다 #y독 을 #b",
+			"  부여합니다."
 		]
 	},
 	"Snecko:LoseTempHPPower": {
-		"NAME": "Fleeting Temporary HP",
+		"NAME": "희미한 임시체력",
 		"DESCRIPTIONS": [
-			"Lose ",
-			" Temporary HP at the start of your next turn."
+			"다음 턴이 시작할 때 임시 체력을 ",
+			" 잃습니다."
 		]
 	},
 	"Snecko:LoseThornsPower": {
-		"NAME": "Fleeting Thorns",
+		"NAME": "희미한 가시",
 		"DESCRIPTIONS": [
-			"Lose ",
-			" Thorns at the start of your next turn."
+			"다음 턴이 시작할 때 가시를 ",
+			"  잃습니다."
 		]
 	},
 	"Snecko:VulnWeakOnHitPower": {
-		"NAME": "Miasma Retaliation",
+		"NAME": "독안개 보호막",
 		"DESCRIPTIONS": [
-			"Apply ",
-			" Weak and Vulnerable to enemies who attack you this turn."
+			"당신을 공격하는 적에게 취약과 약화를 ",
+			" 부여합니다."
 		]
 	},
 	"Snecko:DarkPower": {
-		"NAME": "Snek of Death",
+		"NAME": "죽음의 스네코",
 		"DESCRIPTIONS": [
-			"Deal ",
-			" damage to a random enemy whenever you play a card this turn."
+			"이번 턴에 카드를 낼 때 마다 무작위 적에게 피해를 ",
+			" 줍니다."
 		]
 	}
 }

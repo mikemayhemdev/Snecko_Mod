@@ -1,47 +1,47 @@
 {
   "SneckoMod:GrandLightning": {
-    "NAME": "Lightning",
+    "NAME": "전기",
     "DESCRIPTION": [
-      "#yEvoke: Deal #b",
-      " damage to a random enemy."
+      "#y발현: 무작위 적에게 #b",
+      " 피해를 입힙니다."
     ]
   },
   "SneckoMod:GrandFrost": {
-    "NAME": "Frost",
+    "NAME": "냉기",
     "DESCRIPTION": [
-      "#yEvoke: Gain #b",
-      " #yBlock."
+      "#y발현: 방어도 를 #b",
+      " #y얻습니다."
     ]
   },
   "SneckoMod:GrandMiasma": {
-    "NAME": "Miasma",
+    "NAME": "독안개",
     "DESCRIPTION": [
-      "#yEvoke: To a random enemy, apply #b",
-      " Weak, #b",
-      " Vulnerable, and remove all Block."
+      "#y발현: 무작위 적에게 약화 #b",
+      " , 취약 #b",
+      " 을 부여하고 방어도를 제거합니다."
     ]
   },
   "SneckoMod:GrandFocusing": {
-    "NAME": "Focusing",
+    "NAME": "집중",
     "DESCRIPTION": [
-      "#yEvoke: Gain #b",
-      " Focus."
+      "#y발현: 밀집 을 #b",
+      " 얻습니다."
     ]
   },
   "SneckoMod:GrandDraining": {
-    "NAME": "Draining",
+    "NAME": "흡수",
     "DESCRIPTION": [
-      "#yEvoke: Deal #b",
-      " damage to a random enemy. Heal #b",
-      " HP."
+      "#y발현: 무작위 적에게 #b",
+      " 피해를 입히고, 체력을 #b",
+      " 만큼 회복합니다."
     ]
   },
   "SneckoMod:GrandWarp": {
-    "NAME": "Warp",
+    "NAME": "이동",
     "DESCRIPTION": [
-      "#yEvoke: Play a random Attack from a random character on a random enemy.",
-      "#yEvoke: Play ",
-      " random Attacks from a random character on a random enemy."
+      "#y영창: 무작위 캐릭터의 무작위 공격카드를 무작위 적에게 사용합니다.",
+      "#y영창: 무작위 캐릭터의 무작위 공격카드 ",
+      " 장을 무작위 적에게 사용합니다."
     ]
   }
 }

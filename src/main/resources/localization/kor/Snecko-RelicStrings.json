@@ -1,30 +1,30 @@
 {
   "Snecko:SneckoSoulRelic": {
-    "NAME": "Snecko Soul",
+    "NAME": "스네코의 영혼",
     "FLAVOR": "???????????",
     "DESCRIPTIONS": [
-      "On pickup, add 6 random #yUnknown cards to your deck. NL At the start of combat, gain 1 Temporary HP for every 2 #yUnknown cards in your deck. NL Every 8 rooms, add a random #yUnknown card to your deck."
+      "이 유물을 획득했을 때, 6장의 #y미지 카드를 덱에 추가합니다. NL 내 턴이 시작할 때, #y미지 카드 2 장 당 1의 임시 체력을 얻고, 매 8층을 올라갈 때 마다 무작위 일반 #y미지 카드 1 장을 덱에 추가합니다."
     ]
   },
   "Snecko:SneckoSoulRelicUpgraded": {
-    "NAME": "Super Snecko Soul",
+    "NAME": "슈퍼-스네코의 영혼",
     "FLAVOR": "?!?!?!?!???!",
     "DESCRIPTIONS": [
-      "Replaces #gSnecko #gSoul.  NL At the start of combat, gain 1 Temporary HP for every 2 #yUnknown cards in your deck. Every 8 rooms, add a random #yUnknown #yRare card to your deck."
+      "#g스네코의 #g영혼 을 대체합니다.  NL  내 턴이 시작할 때, #y미지 카드 2 장 당 1의 임시 체력을 얻고, 매 8층을 올라갈 때 마다 무작위 특별 #y미지 카드 1 장을 덱에 추가합니다."
     ]
   },
   "Snecko:ReduceCostRelic": {
-    "NAME": "Snecko Talon",
+    "NAME": "스네코의 발톱",
     "FLAVOR": "???????????",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of the most expensive card in your hand by 1."
+      "내 턴이 시작할 때, 내 손에서 비용이 가장 높은 카드의 비용을 1로 줄입니다."
     ]
   },
   "Snecko:Free3CostRelic": {
-    "NAME": "Super Snecko Eye",
+    "NAME": "슈퍼-스네코의 눈",
     "FLAVOR": "???????????",
     "DESCRIPTIONS": [
-      "Replaces #gSnecko #gEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. NL Once per combat, when you draw a card that costs 3 or more, reduce its cost to 0."
+      "#g스네코의 #g눈 을 대체합니다. 매 전투를 시작할 때 #y혼란 에 걸립니다. 내 턴이 시작할 때, #b2 장의 카드를 추가로 뽑습니다. NL 전투당 한 번 뽑은 카드의 비용이 3 혹은 그 이상일때 그 카드의 비용을 0으로 줄입니다."
     ]
   }
 }

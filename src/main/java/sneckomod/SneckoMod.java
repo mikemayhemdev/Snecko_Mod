@@ -278,9 +278,7 @@
      BaseMod.loadCustomStrings(com.megacrit.cardcrawl.localization.CharacterStrings.class, charStrings);
      String orbStrings = Gdx.files.internal("localization/" + language + "/Snecko-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
      BaseMod.loadCustomStrings(com.megacrit.cardcrawl.localization.OrbStrings.class, orbStrings);
-     String keywordStrings = Gdx.files.internal("localization/" + language + "/Snecko-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-     BaseMod.loadCustomStrings(com.megacrit.cardcrawl.localization.OrbStrings.class, keywordStrings);
-     logger.info("done editing strings");
+      logger.info("done editing strings");
    }
 
 
