@@ -2,9 +2,12 @@
 
  import basemod.abstracts.CustomRelic;
  import com.badlogic.gdx.graphics.Color;
+ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
  import com.megacrit.cardcrawl.cards.AbstractCard;
  import com.megacrit.cardcrawl.characters.AbstractPlayer;
  import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+ import com.megacrit.cardcrawl.powers.ConfusionPower;
  import com.megacrit.cardcrawl.relics.AbstractRelic;
  import java.util.ArrayList;
 
@@ -44,7 +47,21 @@
      }
    }
 
+   public void atPreBattle() {
+     this.flash();
+     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ConfusionPower(AbstractDungeon.player)));
+     //AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player,2));
+   }
 
+   public void onEquip() {
+     AbstractPlayer var10000 = AbstractDungeon.player;
+     var10000.masterHandSize += 2;
+   }
+
+   public void onUnequip() {
+     AbstractPlayer var10000 = AbstractDungeon.player;
+     var10000.masterHandSize -= 2;
+   }
 
 
    public void atBattleStart()
@@ -57,18 +74,12 @@
      return AbstractDungeon.player.hasRelic(SneckoEye.ID);
    }
 
-   public void obtain()
-   {
+   public void obtain() {
      if (AbstractDungeon.player.hasRelic("Snecko Eye")) {
-       for (int i = 0; i < AbstractDungeon.player.relics.size(); i++) {
-         if (AbstractDungeon.player.relics.get(i).relicId.equals("Snecko Eye")) {
-           instantObtain(AbstractDungeon.player, i, true);
-           break;
-         }
-       }
-     } else {
-       super.obtain();
+       AbstractDungeon.player.loseRelic("Snecko Eye");
+
      }
+     super.obtain();
    }
 
    public AbstractRelic makeCopy()

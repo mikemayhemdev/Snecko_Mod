@@ -64,9 +64,10 @@
 
      ArrayList<String> tmp = new ArrayList();
      Iterator var3 = CardLibrary.cards.entrySet().iterator();
-     boolean validCard = true;
+     boolean validCard;
 
      while (var3.hasNext()) {
+         validCard = true;
        Map.Entry<String, AbstractCard> c = (Map.Entry)var3.next();
        if ((((AbstractCard)c.getValue()).rarity == this.rarity) && (((AbstractCard)c.getValue()).type == this.type) && (!((AbstractCard)c.getValue()).hasTag(SneckoMod.UNKNOWN))) {
 
@@ -108,7 +109,7 @@
        SneckoMod.logger.info("Madness! Found no card for " + this.rarity + " " + this.type);
      }
 
-     if (upgraded.booleanValue()) cUnknown.upgrade();
+     if (this.upgraded) cUnknown.upgrade();
      if (cUnknown != null) {
 
 
