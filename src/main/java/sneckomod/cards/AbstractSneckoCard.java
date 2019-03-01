@@ -128,10 +128,10 @@
 
        if (!toHand) {
          p.drawPile.removeCard(this);
-         AbstractDungeon.player.drawPile.addToRandomSpot(CardLibrary.getCopy(cUnknown.cardID));
+         AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
        } else {
 
-           AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CardLibrary.getCopy(cUnknown.cardID),1, true));
+           AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cUnknown,1, true));
        }
      }
    }
