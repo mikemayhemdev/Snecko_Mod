@@ -37,7 +37,7 @@
  @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
  public class SneckoMod implements basemod.interfaces.PostBattleSubscriber, basemod.interfaces.OnStartBattleSubscriber, basemod.interfaces.PostInitializeSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, basemod.interfaces.EditStringsSubscriber
  {
-   private static final com.badlogic.gdx.graphics.Color SNECKO_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(220.0F, 55.0F, 220.0F);
+   private static final com.badlogic.gdx.graphics.Color SNECKO_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(220, 55, 220);
 
    private static final String SneckoMOD_ASSETS_FOLDER = "SneckoImages";
 

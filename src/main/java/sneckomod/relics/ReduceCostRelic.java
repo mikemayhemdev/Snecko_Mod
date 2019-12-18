@@ -9,6 +9,7 @@
  import com.megacrit.cardcrawl.relics.AbstractRelic;
  import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
  import sneckomod.SneckoMod;
+ import sneckomod.actions.ReduceMostExpensiveCardAction;
  import sneckomod.characters.SneckoCharacter;
 
  public class ReduceCostRelic extends CustomRelic
@@ -33,21 +34,7 @@
    public void atTurnStartPostDraw()
    {
      super.atTurnStartPostDraw();
-     AbstractCard mostExpensive = null;
-     int mostExpensiveCost = -1;
-
-     for (AbstractCard c : AbstractDungeon.player.hand.group) {
-       if (c.cost > mostExpensiveCost) {
-         mostExpensive = c;
-       }
-     }
-
-     if (mostExpensive != null) {
-       flash();
-       mostExpensive.modifyCostForTurn(-1);
-       mostExpensive.isCostModified = true;
-       mostExpensive.superFlash(Color.PURPLE.cpy());
-     }
+     addToBot(new ReduceMostExpensiveCardAction());
    }
 
    public boolean canSpawn() {

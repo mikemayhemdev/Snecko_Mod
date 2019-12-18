@@ -12,6 +12,7 @@
  import org.apache.logging.log4j.LogManager;
  import org.apache.logging.log4j.Logger;
  import sneckomod.SneckoMod;
+ import sneckomod.actions.ReduceMostExpensiveCardAction;
 
  public class MasterEyePower extends AbstractPower
  {
@@ -66,22 +67,9 @@
 
    public void atStartOfTurnPostDraw()
    {
+     SneckoMod.logger.info("Beginning atStartOfTurnPostDraw for MasterEye");
      super.atStartOfTurnPostDraw();
-
-     AbstractCard mostExpensive = null;
-     int mostExpensiveCost = -1;
-
-     for (AbstractCard c : AbstractDungeon.player.hand.group) {
-       if (c.cost > mostExpensiveCost) {
-         mostExpensive = c;
-       }
-     }
-
-     if (mostExpensive != null) {
-       mostExpensive.modifyCostForTurn(-1);
-       mostExpensive.isCostModified = true;
-       mostExpensive.superFlash(Color.PURPLE.cpy());
-     }
+     addToBot(new ReduceMostExpensiveCardAction());
    }
  }
 

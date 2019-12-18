@@ -235,9 +235,9 @@
          }
 
          if (!(AbstractDungeon.getCurrRoom() instanceof RestRoom)) {
-             if (this.damageFlash) {
-                 ShaderHelper.setShader(sb, ShaderHelper.Shader.WHITE_SILHOUETTE);
-             }
+//             if (this.damageFlash) {
+//                 ShaderHelper.setShader(sb, ShaderHelper.Shader.WHITE_SILHOUETTE);
+//             }
 
              Boolean renderCorpse = (Boolean)ReflectionHacks.getPrivate(this,AbstractPlayer.class,"renderCorpse");
 
@@ -248,13 +248,13 @@
                  sb.draw(this.img, this.drawX - (float)this.img.getWidth() * Settings.scale / 2.0F + this.animX, this.drawY, (float)this.img.getWidth() * Settings.scale, (float)this.img.getHeight() * Settings.scale, 0, 0, this.img.getWidth(), this.img.getHeight(), this.flipHorizontal, this.flipVertical);
              }
 
-             if (this.damageFlash) {
-                 ShaderHelper.setShader(sb, ShaderHelper.Shader.DEFAULT);
-                 --this.damageFlashFrames;
-                 if (this.damageFlashFrames == 0) {
-                     this.damageFlash = false;
-                 }
-             }
+//             if (this.damageFlash) {
+//                 ShaderHelper.setShader(sb, ShaderHelper.Shader.DEFAULT);
+//                 --this.damageFlashFrames;
+//                 if (this.damageFlashFrames == 0) {
+//                     this.damageFlash = false;
+//                 }
+//             }
 
              this.hb.render(sb);
              this.healthHb.render(sb);
@@ -275,6 +275,9 @@
          }
 
      }
+
+     @Override
+     public String getPortraitImageName(){return "That Sneaky Snake";}
 
      private static final com.megacrit.cardcrawl.localization.CharacterStrings charStrings = CardCrawlGame.languagePack.getCharacterString("Snecko");
    public static final String NAME = charStrings.NAMES[0];
